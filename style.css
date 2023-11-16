@@ -1,0 +1,124 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-color: #222428;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 450px;
+    height: 100vh;
+    background-color: #222428;
+    padding: 0;
+    overflow: hidden;
+}
+
+.raw{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner{
+    width: 100%;
+    height: 170px;
+    background-color: #EDEDF7;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+
+.raw{
+    padding-top: 100px;
+}
+.profile{
+    width: 150px;
+    height: 150px;
+    background-color: aliceblue;
+    border: solid 4px #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+}
+.profile img{
+    width: 100%;
+}
+.name{
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 30px;
+}
+.name i{
+    font-size: 20px;
+    color: #0050db;
+}
+.designation{
+    color: #fff;
+    font-weight: 200;
+    position: relative;
+    bottom: 8px;
+}
+.designation a{
+    color: #459cff;
+    text-decoration: none;
+}
+.button{
+    display: flex;
+    gap: 15px;
+}
+.contact{
+    color: #ffffff;
+    padding: 8px 15px;
+    background-color: #80d350;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contactnow{
+    color: #fff;
+    margin-top: 30px;
+}
+
+
+.contact-icos{
+    display: flex;
+    gap: 20px;
+}
+
+.contact-icon{
+    color: #fff;
+    background-color: #383b41;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 6px 23px;
+    font-size: 20px;
+}
+
+.contact-icos2{
+    margin-top: 20px;
+}
+.fa-whatsapp{
+    color: #60bb2c;
+}
+.fa-envelope{
+    color: #0050db;
+}
+.fa-location-dot{
+    color: #db0025;
+}
+.fa-phone{
+    color: #60bb2c;
+}
