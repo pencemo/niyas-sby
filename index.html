@@ -24,28 +24,85 @@
             <div class="banner"></div>
             <div class="raw">
                 
-                <div class="profile"><img src="./image/man19152370.jpg" alt=""></div>
-                <h2 class="name">Muhammed Niyas MS <i class="fa-solid fa-badge-check" ></i> </h2>
-                <p class="designation">Graphic Designer <a href="">@ NeptuneMark</a></p>
-                <div class="button">
-                    <a class="contact" href="">Add to Contact</a>
-                    <a class="contact" href="">Connect With Me</a>
+                <div class="profile-div">
+                    <div class="profile"><img class="profile-pic" src="./image/man19152370.jpg" alt=""></div>
+                    <div class="profile-logo"><a class="pr-logo-link"  href=""><img class="pr-logo" src="./image/man19152370.jpg" alt=""></a></div>
                 </div>
-                <p class="contactnow">Contact Now</p>
+                <div class="name-hed"><h2 class="name">Muhammed Niyas MS  </h2><i class="fa-solid fa-badge-check" ></i></div>
+                <div class="designation-div"><p class="designation">Graphic Designer </p><a class="des-link" href="">@NeptuneMark</a></div>
+                <div class="button">
+                    <a class="contact add-contact" href="" download="">Add to Contact</a>
+                    <a class="contact share-contact" href="">Connect With Me</a>
+                </div>
+                <p class="contactnow">Contact Info</p>
                 <div class="contact-icos">
-                    <a class="contact-icon" href="" ><i class="fa-sharp fa-solid fa-phone"> </i> Call</a>
-                    <a class="contact-icon" href="" ><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+                    <a class="contact-icon call" href="" ><i class="fa-sharp fa-solid fa-phone"> </i> Call</a>
+                    <a class="contact-icon whatsapp" href="" ><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
                     
                 </div>
                 <div class="contact-icos contact-icos2">
-                    <a class="contact-icon" href="" ><i class="fa-sharp fa-solid fa-location-dot"></i> Location</a>
-                    <a class="contact-icon" href="" ><i class="fa-sharp fa-solid fa-envelope"></i>  Mail</a>
+                    <a class="contact-icon location" href="" ><i class="fa-sharp fa-solid fa-location-dot"></i> Location</a>
+                    <a class="contact-icon mail" href="" ><i class="fa-sharp fa-solid fa-envelope"></i>  Mail</a>
                 </div>
+                <p class="contactnow">Follow Us</p>
+                <div class="social-media">
+                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/whatsapp.png" alt=""></a></div>
+                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/website.png" alt=""></a></div>
+                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/website.png" alt=""></a></div>
+                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/phone.png" alt=""></a></div>
+                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/instagram.png" alt=""></a></div>
+                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/instagram.png" alt=""></a></div>
+                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/email.png" alt=""></a></div>
+                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/phone.png" alt=""></a></div>
+                </div>
+            </div>
+            <div class="bottam">
+                <img src="" alt="">
+                <p class="copyright">Copyright © 2023 <a href="https://neptunemark.com/">NeptuneMark</a>, All rights reserved</p>
             </div>
         </div> 
     </div>
-
     
+
+    <script>
+
+        const person = {
+            profile_pic: "./image/man19152370.jpg",
+            profile_logo: "./image/man19152370.jpg",
+
+            Name: "Muhammed Siraj",
+            designation: "Graphic Designer",
+            des_link_text: "@NeptuneMark",
+            des_link: "https://neptunemark.com/",
+            contact: "./contact/Haris Husain.vcf",
+        };
+
+        const contact ={
+            contact_no: "+918089969860",
+            whatsapp: "+918590305060",
+            location: "https://maps.app.goo.gl/zMguVmn3NbNHkdAb7",
+            mail: "neptunemarkindia@gmail.com"
+        };
+
+
+
+       document.querySelector('.profile-pic').src=person.profile_pic
+       document.querySelector('.name').innerHTML=person.Name;
+       document.querySelector('.designation').innerHTML=person.designation;
+       document.querySelector('.pr-logo').src=person.profile_logo
+       document.querySelector('.des-link').innerHTML=person.des_link_text;
+       document.querySelector('.des-link').href=person.des_link;
+       document.querySelector('.pr-logo-link').href=person.des_link;
+       document.querySelector('.add-contact').href=person.contact;
+
+       document.querySelector('.call').href="tel:"+contact.contact_no;
+       document.querySelector('.whatsapp').href="https://wa.me/"+contact.whatsapp;
+       document.querySelector('.location').href=contact.location;
+       document.querySelector('.mail').href="mailto:"+contact.mail;
+        
+
+
+    </script>
 
 
 
