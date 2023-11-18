@@ -32,7 +32,8 @@
                 <div class="designation-div"><p class="designation">Graphic Designer </p><a class="des-link" href="">@NeptuneMark</a></div>
                 <div class="button">
                     <a class="contact add-contact" href="" download="">Add to Contact</a>
-                    <a class="contact share-contact" href="">Connect With Me</a>
+                    <a class="contact share-contact connect-btn" onclick="openModal('modal-1')" href="">Connect With Me</a>
+                    <button class="contact share-contact connect-btn" onclick="openModal('modal-1')">clikme</button>
                 </div>
                 <p class="contactnow">Contact Info</p>
                 <div class="contact-icos">
@@ -60,8 +61,76 @@
                 <img src="" alt="">
                 <p class="copyright">Copyright © 2023 <a href="https://neptunemark.com/">NeptuneMark</a>, All rights reserved</p>
             </div>
+
+
+            <div id="modal-1" class="modal-container">
+                <div class="modal-body">
+                  <span class="close-modal" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                      <path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"></path>
+                    </svg>
+                  </span>
+                  <div class="modal-header">
+                    <h3>Share your info with Haris Husain</h3>
+                  </div>
+                  <div class="divider"></div>
+        
+                  <form id="form" >
+                    <div class="input-group">
+                      <input required id="firstName" type="text" name="firstName" autocomplete="name" class="input" />
+                      <label for="firstName" class="user-label">Name</label>
+                    </div>
+                    
+                    <div class="input-group">
+                      <input required id="cardNumber" type="text" name="cardNumber" autocomplete="tel" class="input" />
+                      <label for="cardNumber" class="user-label">Mobile</label>
+                    </div>
+                    
+                    <div class="input-group">
+                      <input required id="cardEmailAddress" type="text" name="cardEmailAddress" autocomplete="email" class="input" />
+                      <label for="cardNumber" class="user-label">Email</label>
+                    </div>
+                    
+                    <div class="input-group">
+                      <input id="cardjobTitle" type="text" name="cardjobTitle" autocomplete="organization-title" class="input" />
+                      <label for="cardjobTitle" class="user-label">Designation</label>
+                    </div>
+                    
+                    <div class="input-group">
+                      <input id="cardWebsite" type="text" name="cardWebsite" autocomplete="organization" class="input" />
+                      <label for="cardWebsite" class="user-label">Company</label>
+                    </div>
+                    
+                    <div class="input-group">
+                      <input id="personalBio" type="text" name="personalBio" autocomplete="bio" class="input" />
+                      <label for="personalBio" class="user-label">Note</label>
+                    </div>
+        
+                      <input id="cardType" type="hidden" name="cardType" value="userFormInfo" />
+        
+                    <div type="submit" onsubmit="onFormSubmit()" class="connect-button">
+                      <button id="submitButton">Connect</button>
+                    </div>
+                  </form>
+                  <span class="error_message" id="error_message"></span>
+                  <div class="disclaimer">
+                    <p>Neptune does not sell or share your data</p>
+                  </div>
+                </div>
+              </div> 
+
+
+
+
         </div> 
     </div>
+
+
+    
+
+
+
+
     
 
     <script>
@@ -81,7 +150,7 @@
             contact_no: "+918089969860",
             whatsapp: "+918590305060",
             location: "https://maps.app.goo.gl/zMguVmn3NbNHkdAb7",
-            mail: "neptunemarkindia@gmail.com"
+            mail: "neptunemarkindia@gmail.com",
         };
 
 
@@ -101,6 +170,28 @@
        document.querySelector('.mail').href="mailto:"+contact.mail;
         
 
+
+
+
+       function openModal(id) {
+        document.getElementById(id).classList.add("open");
+        document.body.classList.add("modal-open");
+        }
+
+        // close currently open modal
+        function closeModal() {
+        document.querySelector(".modal-container.open").classList.remove("open");
+        document.body.classList.remove("modal-open");
+        }
+
+        window.addEventListener("load", function () {
+        document.addEventListener("click", (event) => {
+            if (event.target.classList.contains("modal-container")) {
+            closeModal();
+            }
+        });
+        
+        });
 
     </script>
 
