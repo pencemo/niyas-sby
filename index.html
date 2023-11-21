@@ -62,8 +62,8 @@
                 </div>
             </div>
             <div class="bottam">
-                <img src="" alt="">
-                <p class="copyright">Copyright © 2023 <a href="https://neptunemark.com/">NeptuneMark</a>, All rights reserved</p>
+                <div class="card-logo"><img src="./image/card-logo.png" alt=""></div>
+                <p class="copyright">Copyright © 2023 <a href="https://neptunemark.com/"> NeptuneMark</a>, All rights reserved</p>
             </div>
 
 
@@ -81,7 +81,7 @@
         
                   <form id="form" >
                     <div class="input-group">
-                      <input required id="firstName" type="text" name="firstName" autocomplete="name" class="input" />
+                      <input required id="firstName" type="text" name="firstName" autocomplete="name" class="input" value="" />
                       <label for="firstName" class="user-label">Name</label>
                     </div>
                     
@@ -119,6 +119,7 @@
                     </div>
                   </form>
                   <div class="disclaimer">
+                    
                     <p>Neptune does not sell or share your data</p>
                   </div>
                 </div>
@@ -228,6 +229,7 @@
       var jobTitle=document.getElementById('cardjobTitle').value;
       var cardWebsite=document.getElementById('cardWebsite').value;
       var personalBio=document.getElementById('personalBio').value;
+      console.log(fname)
 
       document.getElementById('shareButton').href="https://wa.me/"+contact.whatsapp+"?text=Hi%20"+person.Name+",%20I%20am%20"+fname+",%20"+jobTitle+",%20Cotact%20No%20:%20"+number+",%20Email%20:%20"+EmailAddress+",%20";
 
