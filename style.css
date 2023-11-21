@@ -14,7 +14,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: #333333;
+    color: #ffffff;
 }
 
 .box {
@@ -126,6 +126,15 @@ a{
     font-size: 25px;
     color: #fff;
     margin-top: 30px;
+    position: relative;
+}
+.contactnow::before{
+    content: "";
+    width: 60PX;
+    height: 1PX;
+    background-color: #459cff;
+    position: absolute;
+    bottom: 4px;
 }
 
 

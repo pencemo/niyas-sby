@@ -75,7 +75,7 @@
                     </svg>
                   </span>
                   <div class="modal-header">
-                    <h3>Share your info with Haris Husain</h3>
+                    <h3>Share your info</h3>
                   </div>
                   <div class="divider"></div>
         
@@ -86,36 +86,35 @@
                     </div>
                     
                     <div class="input-group">
-                      <input required id="cardNumber" type="number" name="cardNumber" autocomplete="tel" class="input" />
+                      <input required id="cardNumber" type="number" name="cardNumber" autocomplete="tel" class="input" value=""/>
                       <label for="cardNumber" class="user-label">Mobile</label>
                     </div>
                     
                     <div class="input-group">
-                      <input required id="cardEmailAddress" type="text" name="cardEmailAddress" autocomplete="email" class="input" />
+                      <input required id="cardEmailAddress" type="text" name="cardEmailAddress" autocomplete="email" class="input" value=""/>
                       <label for="cardNumber" class="user-label">Email</label>
                     </div>
                     
                     <div class="input-group">
-                      <input id="cardjobTitle" type="text" name="cardjobTitle" autocomplete="organization-title" class="input" />
+                      <input id="cardjobTitle" type="text" name="cardjobTitle" autocomplete="organization-title" class="input" value=""/>
                       <label for="cardjobTitle" class="user-label">Designation</label>
                     </div>
                     
                     <div class="input-group">
-                      <input id="cardWebsite" type="text" name="cardWebsite" autocomplete="organization" class="input" />
+                      <input id="cardWebsite" type="text" name="cardWebsite" autocomplete="organization" class="input" value=""/>
                       <label for="cardWebsite" class="user-label">Company</label>
                     </div>
                     
-                    <div class="input-group">
-                      <input id="personalBio" type="text" name="personalBio" autocomplete="bio" class="input" />
+                    <!-- <div class="input-group">
+                      <input id="personalBio" type="text" name="personalBio" autocomplete="bio" class="input" value=""/>
                       <label for="personalBio" class="user-label">Note</label>
-                    </div>
+                    </div> -->
         
-                      <input id="cardType" type="hidden" name="cardType" value="userFormInfo" />
         
                     <div type="submit"  class="connect-button">
-                      <!-- <button id="submitButton">Connect</button> -->
-                      <a id="shareButton" class="submitBTN" href="">Share</a>
-                      <a id="submitButton" class="submitBTN" href="">Connect</a>
+                      <button id="submitButton" onclick="share()" class="submitBTN"><a id="share-btn" href="">Share Contact</a></button>
+                      <!-- <a id="shareButton" class="submitBTN" href="">Share</a> -->
+                      <!-- <a id="submitButton" class="submitBTN" href="">Connect</a> -->
                     </div>
                   </form>
                   <div class="disclaimer">
@@ -223,16 +222,20 @@
 
      
       // sharescript
-      var fname=document.getElementById('firstName').value;
+      function share(){
+        var fname=document.getElementById('firstName').value;
       var number=document.getElementById('cardNumber').value;
       var EmailAddress=document.getElementById('cardEmailAddress').value;
       var jobTitle=document.getElementById('cardjobTitle').value;
       var cardWebsite=document.getElementById('cardWebsite').value;
-      var personalBio=document.getElementById('personalBio').value;
+      // var personalBio=document.getElementById('personalBio').value;
       console.log(fname)
 
-      document.getElementById('shareButton').href="https://wa.me/"+contact.whatsapp+"?text=Hi%20"+person.Name+",%20I%20am%20"+fname+",%20"+jobTitle+",%20Cotact%20No%20:%20"+number+",%20Email%20:%20"+EmailAddress+",%20";
+      document.getElementById('share-btn').href="https://wa.me/"+contact.whatsapp+"?text=Hi%20"+person.Name+",%20I%20am%20"+fname+",%20"+jobTitle+",%20Cotact%20No%20:%20"+number+",%20Email%20:%20"+EmailAddress+",%20Company%20:"+cardWebsite;
 
+
+      }
+      
        // form script
        function openModal(id) {
         document.getElementById(id).classList.add("open");
