@@ -32,8 +32,8 @@
                 <div class="designation-div"><p class="designation">Graphic Designer </p><a class="des-link" href="">@NeptuneMark</a></div>
                 <div class="button">
                     <a class="contact add-contact" href="" download="">Add to Contact</a>
-                    <a class="contact share-contact connect-btn" onclick="openModal('modal-1')" href="">Connect With Me</a>
-                    <button class="contact share-contact connect-btn" onclick="openModal('modal-1')">clikme</button>
+                    <!-- <a class="contact share-contact connect-btn" onclick="openModal('modal-1')" href="">Connect With Me</a> -->
+                    <button class="contact share-contact connect-btn" onclick="openModal('modal-1')">Connect With Me</button>
                 </div>
                 <p class="contactnow">Contact Info</p>
                 <div class="contact-icos">
@@ -47,14 +47,18 @@
                 </div>
                 <p class="contactnow">Follow Us</p>
                 <div class="social-media">
-                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/whatsapp.png" alt=""></a></div>
-                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/website.png" alt=""></a></div>
-                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/website.png" alt=""></a></div>
-                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/phone.png" alt=""></a></div>
-                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/instagram.png" alt=""></a></div>
-                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/instagram.png" alt=""></a></div>
-                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/email.png" alt=""></a></div>
-                    <div class="social-media-icon"><a href="www.neptunemark.com"><img src="./image/phone.png" alt=""></a></div>
+                    <div class="social-media-icon fb-link"><a class="facebook" href=""><img src="./image/facebook.png" alt=""></a></div>
+                    <div class="social-media-icon insta-link"><a class="instagram" href="www.neptunemark.com"><img src="./image/instagram.png" alt=""></a></div>
+                    <div class="social-media-icon sky-link"><a class="skype" href="www.neptunemark.com"><img src="./image/skype.png" alt=""></a></div>
+                    <div class="social-media-icon web-link"><a class="web" href="www.neptunemark.com"><img src="./image/web.png" alt=""></a></div>
+                    <div class="social-media-icon li-link"><a class="linkedin" href="www.neptunemark.com"><img src="./image/linkedin.png" alt=""></a></div>
+                    <div class="social-media-icon be-link"><a class="behance" href="www.neptunemark.com"><img src="./image/behance.png" alt=""></a></div>
+                    <div class="social-media-icon x-link"><a class="x-app" href="www.neptunemark.com"><img src="./image/x.png" alt=""></a></div>
+                    <div class="social-media-icon mail-link"><a class="mail" href="www.neptunemark.com"><img src="./image/mail.png" alt=""></a></div>
+                    <div class="social-media-icon go-link"><a class="google" href="www.neptunemark.com"><img src="./image/google.png" alt=""></a></div>
+                    <div class="social-media-icon tl-link"><a class="telegram" href="www.neptunemark.com"><img src="./image/telegram.png" alt=""></a></div>
+                    <div class="social-media-icon yo-link"><a class="youtube" href="www.neptunemark.com"><img src="./image/youtube.png" alt=""></a></div>
+                    <div class="social-media-icon pi-link"><a class="pinterest" href="www.neptunemark.com"><img src="./image/pinterest.png" alt=""></a></div>
                 </div>
             </div>
             <div class="bottam">
@@ -82,7 +86,7 @@
                     </div>
                     
                     <div class="input-group">
-                      <input required id="cardNumber" type="text" name="cardNumber" autocomplete="tel" class="input" />
+                      <input required id="cardNumber" type="number" name="cardNumber" autocomplete="tel" class="input" />
                       <label for="cardNumber" class="user-label">Mobile</label>
                     </div>
                     
@@ -108,11 +112,12 @@
         
                       <input id="cardType" type="hidden" name="cardType" value="userFormInfo" />
         
-                    <div type="submit" onsubmit="onFormSubmit()" class="connect-button">
-                      <button id="submitButton">Connect</button>
+                    <div type="submit"  class="connect-button">
+                      <!-- <button id="submitButton">Connect</button> -->
+                      <a id="shareButton" class="submitBTN" href="">Share</a>
+                      <a id="submitButton" class="submitBTN" href="">Connect</a>
                     </div>
                   </form>
-                  <span class="error_message" id="error_message"></span>
                   <div class="disclaimer">
                     <p>Neptune does not sell or share your data</p>
                   </div>
@@ -131,28 +136,9 @@
 
 
 
-    
+    <script src="script.js"></script>
 
     <script>
-
-        const person = {
-            profile_pic: "./image/man19152370.jpg",
-            profile_logo: "./image/man19152370.jpg",
-
-            Name: "Muhammed Siraj",
-            designation: "Graphic Designer",
-            des_link_text: "@NeptuneMark",
-            des_link: "https://neptunemark.com/",
-            contact: "./contact/Haris Husain.vcf",
-        };
-
-        const contact ={
-            contact_no: "+918089969860",
-            whatsapp: "+918590305060",
-            location: "https://maps.app.goo.gl/zMguVmn3NbNHkdAb7",
-            mail: "neptunemarkindia@gmail.com",
-        };
-
 
 
        document.querySelector('.profile-pic').src=person.profile_pic
@@ -169,10 +155,83 @@
        document.querySelector('.location').href=contact.location;
        document.querySelector('.mail').href="mailto:"+contact.mail;
         
+  
 
+      // link addd
 
+      if(facebook.visibil==true){
+        document.querySelector('.facebook').href=facebook.link
+      }else{
+        document.querySelector('.fb-link').classList.add("remove-link");
+      };
+      if(instagram.visibil==true){
+        document.querySelector('.instagram').href=instagram.link
+      }else{
+        document.querySelector('.insta-link').classList.add("remove-link");
+      };
+      if(skype.visibil==true){
+        document.querySelector('.skype').href=skype.link
+      }else{
+        document.querySelector('.sky-link').classList.add("remove-link");
+      };
+      if(web.visibil==true){
+        document.querySelector('.web').href=web.link
+      }else{
+        document.querySelector('.web-link').classList.add("remove-link");
+      };
+      if(linkedin.visibil==true){
+        document.querySelector('.linkedin').href=linkedin.link
+      }else{
+        document.querySelector('.li-link').classList.add("remove-link");
+      };
+      if(behance.visibil==true){
+        document.querySelector('.behance').href=behance.link
+      }else{
+        document.querySelector('.be-link').classList.add("remove-link");
+      };
+      if(x.visibil==true){
+        document.querySelector('.x-app').href=x.link
+      }else{
+        document.querySelector('.x-link').classList.add("remove-link");
+      };
+      if(mail.visibil==true){
+        document.querySelector('.mail').href=mail.link
+      }else{
+        document.querySelector('.mail-link').classList.add("remove-link");
+      };
+      if(google.visibil==true){
+        document.querySelector('.google').href=google.link
+      }else{
+        document.querySelector('.go-link').classList.add("remove-link");
+      };
+      if(telegram.visibil==true){
+        document.querySelector('.telegram').href=telegram.link
+      }else{
+        document.querySelector('.tl-link').classList.add("remove-link");
+      };
+      if(youtube.visibil==true){
+        document.querySelector('.youtube').href=youtube.link
+      }else{
+        document.querySelector('.yo-link').classList.add("remove-link");
+      };
+      if(pinterest.visibil==true){
+        document.querySelector('.pinterest').href=pinterest.link
+      }else{
+        document.querySelector('.pi-link').classList.add("remove-link");
+      };
 
+     
+      // sharescript
+      var fname=document.getElementById('firstName').value;
+      var number=document.getElementById('cardNumber').value;
+      var EmailAddress=document.getElementById('cardEmailAddress').value;
+      var jobTitle=document.getElementById('cardjobTitle').value;
+      var cardWebsite=document.getElementById('cardWebsite').value;
+      var personalBio=document.getElementById('personalBio').value;
 
+      document.getElementById('shareButton').href="https://wa.me/"+contact.whatsapp+"?text=Hi%20"+person.Name+",%20I%20am%20"+fname+",%20"+jobTitle+",%20Cotact%20No%20:%20"+number+",%20Email%20:%20"+EmailAddress+",%20";
+
+       // form script
        function openModal(id) {
         document.getElementById(id).classList.add("open");
         document.body.classList.add("modal-open");
