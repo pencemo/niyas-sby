@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of Holder</title>
+    <title class="head-name">Name of Holder</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./image/Neptune-mark-logo.png">
 
     <!-- demo fontawoisome -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
@@ -45,6 +46,7 @@
                     <a class="contact-icon location" href="" ><i class="fa-sharp fa-solid fa-location-dot"></i> Location</a>
                     <a class="contact-icon mail" href="" ><i class="fa-sharp fa-solid fa-envelope"></i>  Mail</a>
                 </div>
+                <!-- <a href="https://wa.me/+918089969860?text=niyas muhammed %0a niyasms " data-action="share/whatsapp/share">Share via Whatsapp</a> -->
                 <p class="contactnow">Follow Us</p>
                 <div class="social-media">
                     <div class="social-media-icon fb-link"><a class="facebook" href=""><img src="./image/facebook.png" alt=""></a></div>
@@ -75,7 +77,7 @@
                     </svg>
                   </span>
                   <div class="modal-header">
-                    <h3>Share your info</h3>
+                    <h6 class="share-info">Share your info</h6>
                   </div>
                   <div class="divider"></div>
         
@@ -86,7 +88,7 @@
                     </div>
                     
                     <div class="input-group">
-                      <input required id="cardNumber" type="number" name="cardNumber" autocomplete="tel" class="input" value=""/>
+                      <input required id="cardNumber" type="tel" name="cardNumber" autocomplete="tel" class="input" value=""/>
                       <label for="cardNumber" class="user-label">Mobile</label>
                     </div>
                     
@@ -141,6 +143,7 @@
     <script>
 
 
+       document.querySelector('.head-name').innerHTML=person.Name;
        document.querySelector('.profile-pic').src=person.profile_pic
        document.querySelector('.name').innerHTML=person.Name;
        document.querySelector('.designation').innerHTML=person.designation;
@@ -154,6 +157,8 @@
        document.querySelector('.whatsapp').href="https://wa.me/"+contact.whatsapp;
        document.querySelector('.location').href=contact.location;
        document.querySelector('.mail').href="mailto:"+contact.mail;
+       document.querySelector('.share-info').innerHTML="Share your info with <br><b>"+person.Name+"</b>";
+
         
   
 
@@ -231,10 +236,10 @@
       // var personalBio=document.getElementById('personalBio').value;
       console.log(fname)
 
-      document.getElementById('share-btn').href="https://wa.me/"+contact.whatsapp+"?text=Hi%20"+person.Name+",%20I%20am%20"+fname+",%20"+jobTitle+",%20Cotact%20No%20:%20"+number+",%20Email%20:%20"+EmailAddress+",%20Company%20:"+cardWebsite;
+      document.getElementById('share-btn').href="https://wa.me/"+contact.whatsapp+"?text=Hi%20"+person.Name+"%20👋%0a%0aI%20am%20*"+fname+"*%0a```"+jobTitle+",%20"+cardWebsite+"```%0a%0a_My%20Contact%20Detials:-_%0a%0a*Phone%20No%20:%20"+number+"*%0a*Email%20:%20"+EmailAddress+"*";
 
 
-      }
+      };
       
        // form script
        function openModal(id) {

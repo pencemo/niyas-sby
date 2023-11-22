@@ -3,7 +3,7 @@ const person = {
     profile_logo: "./image/man19152370.jpg",
 
     Name: "Muhammed Siraj",
-    designation: "Graphic Designer",
+    designation: "Graphic Designer,",
     des_link_text: "@NeptuneMark",
     des_link: "https://neptunemark.com/",
     contact: "./contact/Haris Husain.vcf",
@@ -11,7 +11,7 @@ const person = {
 
 const contact ={
     contact_no: "+918089969860",
-    whatsapp: "+918590305060",
+    whatsapp: "+918089969860",
     location: "https://maps.app.goo.gl/zMguVmn3NbNHkdAb7",
     mail: "neptunemarkindia@gmail.com",
 };
@@ -48,7 +48,7 @@ const links =[
     link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
   },
     mail={
-    visibil: false,
+    visibil: true,
     link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
   },
     google={
@@ -64,7 +64,7 @@ const links =[
     link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
   },
     pinterest={
-    visibil: false,
+    visibil: true,
     link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
   },
 ];
