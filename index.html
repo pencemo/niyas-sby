@@ -32,7 +32,7 @@
                 <div class="name-hed"><h2 class="name">Muhammed Niyas MS  </h2><i class="fa-solid fa-badge-check" ></i></div>
                 <div class="designation-div"><p class="designation">Graphic Designer </p><a class="des-link" href="">@NeptuneMark</a></div>
                 <div class="button">
-                    <a class="contact add-contact" href="" download="">Add to Contact</a>
+                    <a class="contact add-contact" href="./contact/Muhammad Niyas Sby.vcf" download="">Add to Contact</a>
                     <!-- <a class="contact share-contact connect-btn" onclick="openModal('modal-1')" href="">Connect With Me</a> -->
                     <button class="contact share-contact connect-btn" onclick="openModal('modal-1')">Connect With Me</button>
                 </div>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="contact-icos contact-icos2">
                     <a class="contact-icon location" href="" ><i class="fa-sharp fa-solid fa-location-dot"></i> Location</a>
-                    <a class="contact-icon mail" href="" ><i class="fa-sharp fa-solid fa-envelope"></i>  Mail</a>
+                    <a class="contact-icon email" href="" ><i class="fa-sharp fa-solid fa-envelope"></i>  Mail</a>
                 </div>
                 <!-- <a href="https://wa.me/+918089969860?text=niyas muhammed %0a niyasms " data-action="share/whatsapp/share">Share via Whatsapp</a> -->
                 <p class="contactnow">Follow Us</p>
@@ -156,7 +156,7 @@
        document.querySelector('.call').href="tel:"+contact.contact_no;
        document.querySelector('.whatsapp').href="https://wa.me/"+contact.whatsapp;
        document.querySelector('.location').href=contact.location;
-       document.querySelector('.mail').href="mailto:"+contact.mail;
+       document.querySelector('.email').href="mailto:"+contact.email;
        document.querySelector('.share-info').innerHTML="Share your info with <br><b>"+person.Name+"</b>";
 
         
@@ -200,7 +200,7 @@
         document.querySelector('.x-link').classList.add("remove-link");
       };
       if(mail.visibil==true){
-        document.querySelector('.mail').href=mail.link
+        document.querySelector('.mail').href="mailto:"+mail.link
       }else{
         document.querySelector('.mail-link').classList.add("remove-link");
       };

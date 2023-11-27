@@ -1,19 +1,19 @@
 const person = {
-    profile_pic: "./image/man19152370.jpg",
-    profile_logo: "./image/man19152370.jpg",
+    profile_pic: "./image/mypic.jpg",
+    profile_logo: "./image/Neptune-mark-logo.png",
 
-    Name: "Muhammed Siraj",
+    Name: "Muhammed Niyas",
     designation: "Graphic Designer,",
     des_link_text: "@NeptuneMark",
     des_link: "https://neptunemark.com/",
-    contact: "./contact/Haris Husain.vcf",
+    contact: "./contact/Muhammad Niyas Sby.vcf",
 };
 
 const contact ={
     contact_no: "+918089969860",
     whatsapp: "+918089969860",
-    location: "https://maps.app.goo.gl/zMguVmn3NbNHkdAb7",
-    mail: "neptunemarkindia@gmail.com",
+    location: "https://maps.app.goo.gl/Cq6MN5TVmKvk1Gv57",
+    email: "niyasms.sby@gmail.com",
 };
 
 
@@ -21,50 +21,50 @@ const contact ={
 const links =[
     facebook={
     visibil: true,
-    link:"https://neptunemark.com/"
+    link:"https://www.facebook.com/niyasmssby/"
   },
     instagram={
     visibil: true,
-    link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
+    link:"https://instagram.com/niyas_sby"
   },
     skype={
-    visibil: true,
+    visibil: false,
     link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
   },
     web={
     visibil: true,
-    link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
+    link:"https://niyas-sby.github.io/"
   },
     linkedin={
     visibil: true,
-    link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
+    link:"https://www.linkedin.com/in/niyassby/"
   },
     behance={
     visibil: true,
-    link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
+    link:"https://www.behance.net/niyassby"
   },
     x={
     visibil: true,
-    link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
+    link:"https://twitter.com/NiyasSby"
   },
     mail={
     visibil: true,
-    link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
+    link:"niyasms.sby@gmail.com"
   },
     google={
-    visibil: true,
+    visibil: false,
     link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
   },
     telegram={
     visibil: true,
-    link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
+    link:"https://t.me/niyassby"
   },
     youtube={
-    visibil: true,
+    visibil: false,
     link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
   },
     pinterest={
-    visibil: true,
+    visibil: false,
     link:"https://maps.app.goo.gl/zMguVmn3NbNHkdAb7"
   },
 ];
