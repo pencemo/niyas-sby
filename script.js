@@ -1,3 +1,17 @@
+
+window.addEventListener("load", () => {
+  const loder = document.querySelector(".loder");
+
+  loder.classList.add("loder--hide");
+
+  loder.addEventListener("transitionend", () => {
+    document.body.removeChild(load)
+  });
+});
+
+
+
+
 const person = {
     profile_pic: "./image/mypic.jpg",
     profile_logo: "./image/Neptune-mark-logo.png",
